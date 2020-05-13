@@ -1,0 +1,191 @@
+a{
+    border: 2px;
+    font-family: Roboto;
+    width: 45%;
+    margin: 1%;
+}
+.contenido{
+    margin-top: 3rem;
+}
+.btn{
+    font-size: 30px;
+    border-radius: 25px;
+    border: solid #fff 2px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.bg-white{
+    border-radius: 25px;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+/*  */
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+nav li {
+    width: 20rem;
+    height: 4.5rem;
+    font-size: 20px;
+    text-align: center;
+    line-height: 4.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    margin:2.7rem;
+}
+
+nav li[id=op1]::before,
+nav li[id=op1]::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav li[id=op1]::before {
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li[id=op1]::after {
+    background-color: #c17afc;
+    transform: translate(1.5rem, 1.5rem);
+    z-index: -2;
+}
+
+nav li[id=op1]:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li[id=op1]:hover::before {
+    background-color: #c17afc;
+}
+
+nav li[id=op1]:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+/*  */
+nav li[id=op3]::before,
+nav li[id=op3]::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav li[id=op3]::before {
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li[id=op3]::after {
+    background-color: #fec180;
+    transform: translate(1.5rem, 1.5rem);
+    z-index: -2;
+}
+
+nav li[id=op3]:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li[id=op3]:hover::before {
+    background-color: #fec180;
+}
+
+nav li[id=op3]:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+/*  */
+nav li[id=op2]::before,
+nav li[id=op2]::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav li[id=op2]::before {
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li[id=op2]::after {
+    background-color: #f42e78;
+    transform: translate(1.5rem, 1.5rem);
+    z-index: -2;
+}
+
+nav li[id=op2]:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li[id=op2]:hover::before {
+    background-color: #f42e78;
+}
+
+nav li[id=op2]:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+/*  */
+nav li[id=op4]::before,
+nav li[id=op4]::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav li[id=op4]::before {
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+nav li[id=op4]::after {
+    background-color: #6681ea;
+    transform: translate(1.5rem, 1.5rem);
+    z-index: -2;
+}
+
+nav li[id=op4]:hover {
+    transform: translate(1.5rem, 1.5rem);
+    color: white;
+}
+
+nav li[id=op4]:hover::before {
+    background-color: #6681ea;
+}
+
+nav li[id=op4]:hover::after {
+    background-color: white;
+    transform: translate(-1.5rem, -1.5rem);
+}
+/*  */

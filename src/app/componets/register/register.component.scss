@@ -1,0 +1,15 @@
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 50px;
+    cursor: pointer;
+}
+@media (min-width:1080px){
+    .card{
+        width: 40%;
+    }
+}

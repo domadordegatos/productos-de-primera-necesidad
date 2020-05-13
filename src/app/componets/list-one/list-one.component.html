@@ -1,0 +1,75 @@
+<div class="total" *ngIf="posts$ | async as posts">
+      <div class="shadow mb-3 card border border-light" [ngClass]="{'d-none':idPost != post.categoriPost}" style="width: 100%; border-radius: 10px;" *ngFor="let post of posts; index as i">
+        <div class="tarjetass" *ngIf="idPost == post.categoriPost && post.permisosPost == 'aprobado'" >
+          <div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" id="carouselExampleCaptions{{i}}" class="carousel slide border  border-bottom-0 shadow-lg" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li [attr.data-target]="'#carouselExampleCaptions' + i" data-slide-to="0" class="active"></li>
+                <li [attr.data-target]="'#carouselExampleCaptions' + i" data-slide-to="1"></li>
+                <li [attr.data-target]="'#carouselExampleCaptions' + i" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2000">
+                  <img style="height: 11rem; border-top-left-radius: 10px; border-top-right-radius: 10px;" [src]="post.imagePost1" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block ">
+                    <h5>{{post.titlePost}}</h5>
+                  </div>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                  <img style="height: 11rem; border-top-left-radius: 10px; border-top-right-radius: 10px;" [src]="post.imagePost2" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block ">
+                    <h5>{{post.titlePost}}</h5>
+                  </div>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                  <img style="height: 11rem; border-top-left-radius: 10px; border-top-right-radius: 10px;" [src]="post.imagePost3" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block ">
+                    <h5>{{post.titlePost}}</h5>
+                    </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" [attr.href]="'#carouselExampleCaptions' + i" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 40px; height: 40px;"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" [attr.href]="'#carouselExampleCaptions' + i" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" style="width: 40px; height: 40px;" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+  
+          <div class="card-body pb-2 pt-2" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+            <div class="cardtenido" style="background: white; padding: 1rem; border-radius: 10px;"  class="collapse" id="collapseExample{{i}}">
+              <div class="form-inline justify-content-center">
+                <div class="rounded-pill text-center" [ngClass]="{'bg-warning': tag =='Sin Domicilio', 'bg-success': tag =='Producto Artesanal', 'bg-info': tag =='Con Domicilio', 'bg-primary': tag =='Producto de Fabrica'}" style="padding: 0.4rem 0.7rem 0.4rem 0.7rem; margin: 0.2rem 0.2rem 0.2rem 0.2rem;" *ngFor="let tag of post.tagsPost">{{tag}}</div>
+              </div>
+  
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title" style="border-bottom: solid 2px #00e043;"> {{post.titlePost}} </h5>
+                </div>
+                <div class="col">
+                  <span class="float-right" style="border-bottom: solid 2px #07a0f2;">Cel. {{post.telPost}} </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p class="card-text mb-2" style="border-bottom: solid 2px #f6f948;">Precio Unidad: ${{post.precioPost}}</p>
+  
+                </div>
+                <div class="col">
+                  <p class="card-text mb-2 float-right" style="border-bottom: solid 2px #fb4141;">Direccion: {{post.dirPost}}</p>
+  
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <p class="card-text text-center mb-4 pl-4 pr-4" style="border-bottom: solid 2px#ad20ee;">{{post.namePost}}</p>
+              </div>
+            </div>
+            <div class="container text-center">
+              <a class="btn btn-info" [attr.id]="'show_c' + i" data-toggle="collapse" [attr.href]="'#collapseExample' + i"><i class="fas fa-angle-double-down"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+</div>

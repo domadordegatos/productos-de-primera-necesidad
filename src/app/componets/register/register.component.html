@@ -1,0 +1,91 @@
+
+<app-navbar-sup></app-navbar-sup>
+<div class="container d-flex justify-content-center" style="width: 100%;">
+
+    <div class="card m-2">
+        <h5 class="card-header">Registra tu producto</h5>
+        <div class="card-body">
+          <form class="pb-0 mb-0" [formGroup]="newPostForm" (ngSubmit)="addNewPost(newPostForm.value)">
+              <div class="form-group">
+                  <label class="m-0 p-0">Un titulo para tu producto</label>
+                  <input type="text" class="form-control form-control-sm" id="titlePost" formControlName="titlePost" required>
+              </div>
+                    <div id="content" class="form-group">
+                        <label class="m-0 p-0">Caracteristicas de tu Servicio</label>
+                        <select class="selectpicker"  multiple  id="tagsPost" formControlName="tagsPost" required>
+                            <option style="background: #fdeb71;" value="Con Domicilio">Con Domicilio</option>
+                            <option style="background: #fdeb71;" value="Sin Domicilio">Sin Domicilio</option>
+                            <option style="background: #90f7ec;" value="Producto Artesanal">Producto Artesanal</option>
+                            <option style="background: #90f7ec;" value="Producto de Fabrica">Producto de Fabrica</option>
+                          </select>
+                      </div>
+    
+              <div class="form-group">
+                <label class="m-0 p-0 pr-2">Cual es tu Categoria</label>
+                <select class="selectpicker" id="categoriPost" formControlName="categoriPost" required>
+                    <option value="Gel Antibacterial">Gel Antibacterial</option>
+                    <option value="Jabón Antibacterial">Jabón Antibacterial</option>
+                    <option value="Alcohol">Alcohol</option>
+                    <option value="Tapabocas">Tapabocas</option>
+                    <option value="Otros">Otros</option>
+                  </select>
+              </div>
+            <div class="row">
+                <div class="col">
+                    <label class="m-0 p-0">Precio de la unidad</label>
+                    <input type="number" 
+                    class="form-control form-control-sm" 
+                    id="precioPost" formControlName="precioPost" 
+                    required>
+                </div>
+                <div class="col">
+                    <label class="m-0 p-0"># Celular</label>
+                    <input type="number" 
+                    class="form-control form-control-sm" 
+                    id="telPost" formControlName="telPost" 
+                    required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="m-0 p-0">Cual es tu nombre</label>
+                <input type="text" class="form-control form-control-sm" id="namePost" formControlName="namePost" required>
+            </div>
+            <div class="form-group">
+                <label class="m-0 p-0">Direccion de ventas</label>
+                <input type="Text" class="form-control form-control-sm" id="dirPost" formControlName="dirPost" required>
+            </div>
+            <!--  -->
+            <div class="text-center">
+                <label>Sube imagenes de tu Producto</label>
+            </div>
+            <div class="row text-center">
+                <div class="image-upload col">
+                    <label for="file-input3">
+                        <img src="../assets/upload.png"/>
+                    </label>
+                    <input id="file-input3" type="file" formControlName="imagePost1" required (change)="handleImage1($event)"/>
+                </div>
+                <div class="image-upload col">
+                    <label for="file-input2">
+                        <img src="../assets/upload.png"/>
+                    </label>
+                    <input id="file-input2" type="file" formControlName="imagePost2" required (change)="handleImage2($event)"/>
+                </div>
+                <div class="image-upload col">
+                    <label id="file-input11" for="file-input1">
+                        <img src="../assets/upload.png"/>
+                    </label>
+                    <input id="file-input1" type="file" formControlName="imagePost3" required (change)="handleImage3($event)"/>
+                </div>
+            </div>
+            <div class="form-inline" style="margin-top: 0.5rem;">
+                <!-- <a href="#" type="submit" class="btn btn-primary">Registrar mi producto</a> -->
+                <input type="submit" class="btn btn-sm btn-primary" value="Registrar mi producto">
+                <a routerLink="/home" href="#" class="btn btn-danger ml-2"><i class="fas fa-arrow-circle-left"></i></a>
+              </div>
+    
+          </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

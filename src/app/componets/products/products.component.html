@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="text-center text-white mt-1">
+        <h3>¿Que producto buscas?</h3>
+        <hr class="mt-0 mb-0">
+    </div>
+    <div class="form mt-0 pt-0">
+        <div class="form-inline d-flex justify-content-center mt-0 pt-0">
+            <nav class="mt-0 pt-0">
+                <ul>
+                  <li id="op1" (click)="alc()">Alcohol  <i class="fas fa-wine-bottle fa-2x"></i></li>
+                  <li id="op2" (click)="jab()">Jabon Antibctrl  <i class="fas fa-hands-wash fa-2x"></i></li>
+                  <li id="op3" (click)="gel()">Gel Antibctrl  <i class="fas fa-pump-medical fa-2x"></i></li>
+                  <li id="op4" (click)="tap()">Tapabocas  <i class="fas fa-head-side-mask fa-2x"></i></li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+    <div class="text-center pt-0 text-white font-italic">
+        <p>Si lo que buscas no esta aqui, puedes dar click
+            en "otros"
+        </p>
+            <i routerLink="/home" class="fas fa-arrow-circle-left fa-3x"></i>
+    </div>
+</div>
